@@ -1,0 +1,42 @@
+Python city theft simulator notes:
+
+Statistics
+    -City of Chicago
+        -Got info from 2010 to present
+            -Only looking at residential/apartment theft
+
+Objects
+    -Household objects
+        -Have an attractiveness value
+            -Determines how appealing that house is to a thief
+            -Determines possible takeaway for the thief (monetary)
+        -Have a security value
+            -Determines likelihood of being caught robbing this house
+            -
+    -Distric objects?
+        -Have their own attractiveness and security values that may apply to all locations inside by default?
+    -Police objects
+        -Signify either a patrolling or parked car
+        -Automatically lower attractiveness and/or increase security of nearby locations
+            -Maybe attractiveness only lowers if thieves see the cop car, but security goes up regardless
+    -Thief objects
+        -Maybe have a percieved attractiveness modifier for each location?
+        -Utilize utility function to compare attractiveness and likelihood of being caught to determine whether or not to rob a house
+            -Each thief could have a utility threshold, so they do not rob a place unless the utility is above that threshold
+            -Each thief should probably have a predetermined level of risk aversion
+
+Attractiveness
+
+
+
+
+Utility function
+    -Needs to relate jail time to monetary value on a singular scale i.e. how much of a potential payoff is required to risk a certain amount of jail time
+
+    -Possible functions
+        -Isoelastic     n > 0 for risk aversion
+            {(c^(1-n)-1)/1-n    n != 1 }
+            {ln(c)              n == 1 }
+        -Exponential    a > 0 for risk aversion
+            {(1-e^(-ac))/a      a != 0 }
+            {c                  a == 0 }
