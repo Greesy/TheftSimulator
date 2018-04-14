@@ -42,7 +42,6 @@ def main():
         numIncidents = len(data) - 1    # First entry is headers
 
         first = 1
-        print("Total rows:", len(data))
         for i in data:
             # Each entry (i) should look like this:
             # i[ 0   1            2     3      4            5                     6       7     8         9    ]
@@ -91,10 +90,10 @@ if __name__ == '__main__':
     #     print("Total incidents:", values["Incidents"])
     #     print("Total locations:", len(values["Locations"]))
     #     print("Locations/incidents (higher is better):", len(values["Locations"])/values["Incidents"])
-    
-    # for key, values in districts.items():
-    #     arrestRatio = values["Arrests"] / values["Incidents"]
-    #     print(key, "arrest ratio:", arrestRatio)
+
+    for key, values in districts.items():
+        arrestRatio = values["Arrests"] / values["Incidents"]
+        print(key, "arrest ratio:", arrestRatio)
 
     print()
     print("Done.")
