@@ -48,13 +48,9 @@ class Thief:
         if randomNum < 0:
             randomNum = 0
 
-
-# Make list of house objects
-# If going further, a list/dict where each entry corresponds to a district and is a list of houses for that district
-
-
+# Call main from analyzeRelevantCrimes
 numIncidents, numArrests, descriptions, parsedDistricts = main()
-# Districts looks like:
+# Districts look like:
 # District: {'Arrests', 'Incidents', 'Locations:{'block1': {'Arrests', 'Incidents'}, etc. } }
 
 # Make a sorted list of tuples from the districts
@@ -105,7 +101,7 @@ totalAvg = 0
 for i in districtObjs:
     print()
     print("District", i.name, "locations | incidents:",
-     i.getTotalLocations(), "|", i.incidents, "  ", i.incidents/i.getTotalLocations())
+        i.getTotalLocations(), "|", i.incidents, "  ", i.incidents/i.getTotalLocations())
     print("District wealth modifier", i.wealthModifier)
     total = sum(j.wealth for j in i.locations)
     print("District", i.name, "average wealth:", total/i.getTotalLocations())
