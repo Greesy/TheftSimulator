@@ -1,18 +1,5 @@
-
 def main():
     import csv
-    # from PyQt5.QtWidgets import QApplication, QWidget
-    # from PyQt5 import QtGui
-
-    # class Window(QtGui.QMainWindow()):
-    #     def __init__(self):
-    #         super(Window, self).__init__()
-    #         self.setGeometry(50, 50, 500, 500)
-    #         self.setWindowTitle("Theft Simulation")
-    #         self.show()
-
-    # app = QtGui.QGuiApplication([])
-    # GUI = Window()
 
     # Add key to dictionary if it doesn't exist. Increment it by 1 if it does exist.
     def populateDict(thisDict, key, boolArrest):

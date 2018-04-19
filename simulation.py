@@ -100,11 +100,11 @@ for district in sortedParsedDistricts:
 totalAvg = 0
 for i in districtObjs:
     print()
-    print("District", i.name, "locations | incidents:",
-        i.getTotalLocations(), "|", i.incidents, "  ", i.incidents/i.getTotalLocations())
-    print("District wealth modifier", i.wealthModifier)
+    print("District", i.name, "locations:", i.getTotalLocations(), "   incidents:", i.incidents)
+    print("Average incidents per location:", round(i.incidents/i.getTotalLocations(), 2))
+    print("District wealth modifier", round(i.wealthModifier, 2))
     total = sum(j.wealth for j in i.locations)
-    print("District", i.name, "average wealth:", total/i.getTotalLocations())
+    print("District", i.name, "average wealth:", round(total/i.getTotalLocations(), 2))
     totalAvg += total/i.getTotalLocations()
 
 print()
